@@ -87,26 +87,10 @@ public class AppiumSetup {
   	  //options.setCapability("locationCoordinate", "28.47, 77.05");
   	  options.setApp("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//consumer-app.apk");
   	  AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
-  	  //setLocation("28.47", "77.05"); 
 
   	  
   	  return driver;
     }
-//    public static void setLocation(String latitude, String longitude) {
-//        try {
-//            String command = String.format("adb emu geo fix %s %s", longitude, latitude);
-//            Process process = Runtime.getRuntime().exec(command);
-//            process.waitFor();
-//
-//            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-//            String line;
-//            while ((line = reader.readLine()) != null) {
-//                System.out.println(line);
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
     
     public static void server() throws IOException, InterruptedException {
   	  if(AppiumSetup.isServerListening()==false) {
