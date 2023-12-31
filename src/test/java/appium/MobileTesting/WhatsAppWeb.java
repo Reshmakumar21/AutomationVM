@@ -4,11 +4,8 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class WhatsAppWeb {
@@ -31,18 +28,14 @@ public class WhatsAppWeb {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
         //send me a msg
         driver.findElement(By.xpath("//*[@id=\"pane-side\"]/div[1]/div/div/div[1]/div/div/div/div[2]")).click();
-        driver.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div[2]/div[1]/p")).sendKeys(Keys.CONTROL+"v"+Keys.ENTER);
-        driver.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[1]/div/div/div/div")).click();
+        clipboardtest.clipboard();
+        driver.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div[2]/div[1]/p")).sendKeys(Keys.CONTROL+"v");
+        System.out.println("Screenshot pasted to wa");
         Thread.sleep(1000);
-     // Wait for file input element to be clickable
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        WebElement fileInput = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='main']/footer/div[1]/div/span[2]/div/div[1]/div/div/span/div/ul/div/div[1]/li/div")));
-
-        // Send file path to the file input element
-        fileInput.sendKeys("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//test-result.png");
-
-//        driver.findElement(By.xpath("//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[1]/div/div/span/div/ul/div/div[1]/li/div")).sendKeys("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//test-result.png");
+        driver.findElement(By.xpath("//div[@title='Type a message']")).sendKeys("Test Completed"+Keys.ENTER);
+        System.out.println("comment entered in wa and sent");
         Thread.sleep(20000);
+        System.out.println("wa closed");
         driver.quit();
 	}
 }

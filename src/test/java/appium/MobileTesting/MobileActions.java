@@ -7,6 +7,8 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 
+import javax.imageio.ImageIO;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -66,7 +68,21 @@ public class MobileActions {
 	        	System.err.println("Failed to take screenshot: " + e.getMessage());
 	        }
 	    }		
-	
+	public static void testResult(AppiumDriver driver) {
+		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+        // Replace this path with your image file's path
+        String imagePath = "C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//test-result.png";
+
+        try {
+            // Save the screenshot to the desired location (overwrite the existing file)
+            ImageIO.write(ImageIO.read(screenshot), "png", new File(imagePath));
+            System.out.println("Screenshot updated successfully at: " + imagePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+	}
 	public static void login(AndroidDriver driver) throws IOException, InterruptedException {
 		String path = createScreenshotsFolder("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//Results");
 		//takeScreenshot(driver,path);
@@ -79,17 +95,17 @@ public class MobileActions {
 		
 		MobileUI.btn_submit(driver).click();
 		takeScreenshot(driver,path);
+		MobileUI.btn_locateus(driver).isDisplayed();
 		MobileUI.btn_locateus(driver).click();
 		takeScreenshot(driver,path);
-	
 		System.out.println("test completed");
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		//WhatsAppWeb.whatsappAutomation();
+		testResult(driver);
+		WhatsAppWeb.whatsappAutomation();
 	}
 }

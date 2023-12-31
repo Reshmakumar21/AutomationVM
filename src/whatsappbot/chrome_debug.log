@@ -1,10 +1,5 @@
-[18216:21040:1229/130208.870:WARNING:chrome_main_delegate.cc(667)] This is Chrome version 120.0.6099.130 (not a warning)
-[18216:21040:1229/130208.962:INFO:policy_logger.cc(144)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(168) Starting CBCM Controller Initialization
-[18216:21040:1229/130208.962:INFO:policy_logger.cc(144)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(196) No machine level policy manager exists.
-[18216:21040:1229/130210.642:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[18216:21040:1229/130220.470:INFO:CONSOLE(216)] "Another connection wants to delete database 'wawc_db_enc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/app.bf3d055fedcf056e6aa9.js (216)
-[18216:21040:1229/130220.470:INFO:CONSOLE(215)] "Another connection wants to delete database 'wawc_db_enc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/WAWebWorker.cabe3b1f4dd26e669166.worker.js (215)
-[18216:21040:1229/130221.974:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[18216:21040:1229/130222.103:INFO:CONSOLE(215)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (215)
-[18216:21040:1229/130222.105:INFO:CONSOLE(215)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (215)
-[18216:21040:1229/130304.562:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[15368:11420:1231/150723.721:WARNING:chrome_main_delegate.cc(667)] This is Chrome version 120.0.6099.130 (not a warning)
+[15368:11420:1231/150723.819:INFO:policy_logger.cc(144)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(168) Starting CBCM Controller Initialization
+[15368:11420:1231/150723.819:INFO:policy_logger.cc(144)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(196) No machine level policy manager exists.
+[15368:11420:1231/150724.890:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[15368:11420:1231/150802.739:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
