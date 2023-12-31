@@ -25,7 +25,14 @@ jobs:
           npm install -g appium
           appium -v
           appium
-      - name: run appium android tests
+          
+  job2:
+      runs-on: macos-latest
+      if: ${{ always() }}
+      needs: [build-and-test]
+    
+      steps:  
+      - name: run appium android test
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
