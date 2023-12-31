@@ -25,13 +25,10 @@ jobs:
           npm install -g appium
           appium -v
           appium
-          
-  job2:
-      runs-on: macos-latest
-      if: ${{ always() }}
-      needs: [build-and-test]
-    
-      steps:  
+          for i in {1..10}; do
+            appium --version && break || sleep 10
+          done
+  
       - name: run appium android test
         uses: reactivecircus/android-emulator-runner@v2
         with:
