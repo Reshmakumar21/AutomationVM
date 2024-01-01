@@ -17,7 +17,7 @@ jobs:
       - name: Debug Emulator Setup
         run: |
           echo "Creating AVD..."
-          echo no | $ANDROID_HOME/tools/bin/avdmanager create avd -n emulatortest2 -k "system-images;android-29;google_apis;x86"
+          echo no | $ANDROID_HOME/tools/bin/avdmanager create avd -n emulatortest2 -k "system-images;android-UpsideDownCakePrivacySandbox;google_apis_playstore;x86_64"
           echo "Starting Emulator..."
           $ANDROID_HOME/emulator/emulator -avd emulatortest2 -no-audio -no-window &
           echo "Waiting for Emulator..."
