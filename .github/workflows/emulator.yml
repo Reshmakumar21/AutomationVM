@@ -1,8 +1,7 @@
-name: Launch Emulator 
+name: Launch Emulator
 
 on:
   workflow_dispatch:
-    
 
 jobs:
   launchemulator:
@@ -11,7 +10,10 @@ jobs:
     steps:
       - name: Check Android SDK Path
         run: echo $ANDROID_HOME
-      
+
+      - name: List available system images
+        run: $ANDROID_HOME/tools/bin/sdkmanager --list
+
       - name: Debug Emulator Setup
         run: |
           echo "Creating AVD..."
