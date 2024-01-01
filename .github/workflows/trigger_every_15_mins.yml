@@ -30,13 +30,17 @@ jobs:
         run: |
           appium driver install uiautomator2
   
-      - name: run appium android test
+      - name: Run Appium Android Test
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
+          script: |
+            emulator -avd <emulatortest2> -no-audio -no-window &
+            sleep 30  # Wait for emulator to fully boot
+            java -cp "src/test/java" appium.MobileTesting.Logintest
           
-      - name: Compile Appium test
-        run: javac -cp "src/test/java" src/test/java/appium/MobileTesting/Logintest.java
+      #- name: Compile Appium test
+        #run: javac -cp "src/test/java" src/test/java/appium/MobileTesting/Logintest.java
 
-      - name: Run Appium test
-        run: java -cp "src/test/java" appium.MobileTesting.Logintest
+      #- name: Run Appium test
+       # run: java -cp "src/test/java" appium.MobileTesting.Logintest
