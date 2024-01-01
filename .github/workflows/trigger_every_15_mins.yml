@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: macos-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
@@ -25,9 +25,6 @@ jobs:
           npm install -g appium
           appium -v
           appium
-          for i in {1..10}; do
-            appium --version && break || sleep 10
-          done
   
       - name: run appium android test
         uses: reactivecircus/android-emulator-runner@v2
