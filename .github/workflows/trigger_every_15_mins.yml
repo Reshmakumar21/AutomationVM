@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: windows-latest
+    runs-on: macos-latest
 
     steps:
       - name: Checkout code
@@ -22,15 +22,18 @@ jobs:
 
       - name: Set up Appium
         run: |
-          npm install -g appium
+          npm install -g appium@2
           appium -v
-          appium
+          appium &>/dev/null &
+
+      - name: Set up UIAutomator2
+        run: |
+          appium driver install uiautomator2
   
       - name: run appium android test
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
-          script: mvn clean test -Pandroid
           
       - name: Compile Appium test
         run: javac -cp "src/test/java" src/test/java/appium/MobileTesting/Logintest.java
