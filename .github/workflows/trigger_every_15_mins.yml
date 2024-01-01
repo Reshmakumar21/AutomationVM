@@ -32,8 +32,8 @@ jobs:
           
       - name: Set up Emulator
         run: |
-          echo no | C:\Users\0047HE744\AppData\Local\Android\Sdk\tools\bin\avdmanager create avd -n emulatortest2 -k "system-images;android-29;google_apis;x86"
-          C:\Users\0047HE744\AppData\Local\Android\Sdk\emulator\emulator -avd emulatortest2 -no-audio -no-window &
+          echo no | "C:\\Users\\0047HE744\\AppData\\Local\\Android\\Sdk\\tools\\bin\\avdmanager" create avd -n emulatortest2 -k "system-images;android-29;google_apis;x86"
+          "C:\\Users\\0047HE744\\AppData\\Local\\Android\\Sdk\\emulator\\emulator" -avd emulatortest2 -no-audio -no-window &
           android-wait-for-emulator
           adb devices
   
