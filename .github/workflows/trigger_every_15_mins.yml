@@ -29,13 +29,6 @@ jobs:
       - name: Set up UIAutomator2
         run: |
           appium driver install uiautomator2
-          
-      - name: Set up Emulator
-        run: |
-          echo no | $ANDROID_HOME/tools/bin/avdmanager create avd -n emulatortest2 -k "system-images;android-29;google_apis;x86"
-          $ANDROID_HOME/emulator/emulator -avd emulatortest2 -no-audio -no-window &
-          android-wait-for-emulator
-          adb devices
   
       - name: Run Appium Tests
         run: mvn -Dtest=appium.MobileTesting.Logintest test
