@@ -8,26 +8,36 @@ jobs:
     runs-on: macos-latest
 
     steps:
+      - name: Set up JDK 8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
       - name: Install Android SDK
         run: |
-          mkdir -p $HOME/android-sdk-dl
-          cd $HOME/android-sdk-dl
-          curl -o sdk-tools.zip https://dl.google.com/android/repository/commandlinetools-mac-7583922_latest.zip
-          unzip -qq sdk-tools.zip -d $HOME/android-sdk
+          mkdir -p $HOME/android-sdk
+          wget -q "https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip" -O android-sdk.zip
+          unzip -qq android-sdk.zip -d $HOME/android-sdk
 
       - name: Set up environment
-        run: echo "export ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV && echo "export PATH=$PATH:$HOME/android-sdk/tools/bin" >> $GITHUB_ENV
-
-      - name: Install SDK components
         run: |
-          yes | $HOME/android-sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-29" "system-images;android-29;google_apis;x86"
-          echo no | $HOME/android-sdk/tools/bin/avdmanager create avd -n Pixel_AVD -k "system-images;android-29;google_apis;x86"
+          echo 'export ANDROID_HOME=$HOME/android-sdk' >> $GITHUB_ENV
+          echo 'export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools' >> $GITHUB_ENV
+          source $GITHUB_ENV
 
-      - name: Launch emulator
-        run: emulator -avd Pixel_AVD -no-window -no-audio
+      - name: Accept licenses and install SDK components
+        run: |
+          yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
+          $ANDROID_HOME/tools/bin/sdkmanager "platform-tools" "platforms;android-29" "system-images;android-29;google_apis;x86"
+
+      - name: Create AVD and Launch emulator
+        run: |
+          echo no | $ANDROID_HOME/tools/bin/avdmanager create avd -n Pixel_AVD -k "system-images;android-29;google_apis;x86"
+          $ANDROID_HOME/emulator/emulator -avd Pixel_AVD -no-window -no-audio
 
       - name: Wait for emulator to start
-        run: adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done; input keyevent 82'
+        run: |
+          adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done; input keyevent 82'
 
       - name: List devices
         run: adb devices
