@@ -4,20 +4,21 @@ on:
   workflow_dispatch:
 
 jobs:
-  launch-emulator:
+  launch_emulator:
     runs-on: macos-latest
 
     steps:
-      - name: Set up Android SDK
-        run: |
-          mkdir -p $HOME/android-sdk/cmdline-tools/latest
-          cd $HOME/android-sdk/cmdline-tools/latest
-          curl -o tools.zip https://dl.google.com/android/repository/commandlinetools-mac-6609375_latest.zip
-          unzip -qq tools.zip
-          rm -f tools.zip
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Accept Android licenses
-        run: yes | $HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --licenses
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
 
-      - name: Create Android emulator
-        run: echo no | $HOME/android-sdk/cmdline-tools/latest/bin/avdmanager create avd -n emulatortest2 -k "syste
+      - name: Launch Android Emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29  # Adjust the API level to your requirements
+          arch: x86_64   # Choose the architecture
+          profile: Nexus_5X_API_29  # Choose the emulator profile
