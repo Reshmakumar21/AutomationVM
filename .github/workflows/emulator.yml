@@ -10,12 +10,21 @@ jobs:
     steps:
       - name: Install Android SDK
         run: |
-          echo y | sdkmanager "platform-tools" "platforms;android-29" "system-images;android-29;google_apis;x86"
-          echo no | avdmanager create avd -n Pixel_AVD -k "system-images;android-29;google_apis;x86"
+          mkdir -p $HOME/android-sdk-dl
+          cd $HOME/android-sdk-dl
+          curl -o sdk-tools.zip https://dl.google.com/android/repository/commandlinetools-mac-7583922_latest.zip
+          unzip -qq sdk-tools.zip -d $HOME/android-sdk
+
+      - name: Set up environment
+        run: echo "export ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV && echo "export PATH=$PATH:$HOME/android-sdk/tools/bin" >> $GITHUB_ENV
+
+      - name: Install SDK components
+        run: |
+          yes | $HOME/android-sdk/tools/bin/sdkmanager "platform-tools" "platforms;android-29" "system-images;android-29;google_apis;x86"
+          echo no | $HOME/android-sdk/tools/bin/avdmanager create avd -n Pixel_AVD -k "system-images;android-29;google_apis;x86"
 
       - name: Launch emulator
-        run: |
-          emulator -avd Pixel_AVD -no-window -no-audio
+        run: emulator -avd Pixel_AVD -no-window -no-audio
 
       - name: Wait for emulator to start
         run: adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done; input keyevent 82'
