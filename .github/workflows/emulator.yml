@@ -1,4 +1,4 @@
-name: Run Appium Test Every 15 Minutes
+name: Appium test 
 
 on:
   workflow_dispatch:
