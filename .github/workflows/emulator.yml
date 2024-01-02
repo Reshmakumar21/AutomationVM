@@ -1,0 +1,29 @@
+name: Appium test 
+
+on:
+  workflow_dispatch:
+    
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Appium
+        run: |
+          npm install -g appium@2
+          appium -v
+          appium &>/dev/null &
+
+      - name: Set up UIAutomator2
+        run: |
+          appium driver install uiautomator2
+  
+      - name: run tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          script: mvn clean test
