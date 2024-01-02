@@ -8,25 +8,14 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up JDK 8
-        uses: actions/setup-java@v1
-        with:
-          java-version: 8
-
-      - name: Set up Android SDK
-        uses: reactivecircus/android-setup@v2
-        with:
-          components: emulator
-
-      - name: Create emulator
+      - name: Install Android SDK
         run: |
-          echo no | $RUNNER_WORKSPACE/tools/bin/avdmanager create avd -n Pixel_AVD -k "system-images;android-29;google_apis;x86"
+          echo y | sdkmanager "platform-tools" "platforms;android-29" "system-images;android-29;google_apis;x86"
+          echo no | avdmanager create avd -n Pixel_AVD -k "system-images;android-29;google_apis;x86"
 
       - name: Launch emulator
-        run: $RUNNER_WORKSPACE/emulator/emulator -avd Pixel_AVD -no-window -no-audio
+        run: |
+          emulator -avd Pixel_AVD -no-window -no-audio
 
       - name: Wait for emulator to start
         run: adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done; input keyevent 82'
