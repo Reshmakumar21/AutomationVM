@@ -8,18 +8,8 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Check Android SDK Path
-        run: echo $ANDROID_HOME
-
-      - name: List available system images
-        run: $ANDROID_HOME/tools/bin/sdkmanager --list
-
-      - name: Launch Android Emulator
+      - name: Run Tests on Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 30
-          target: default
-          arch: x86_64
-          profile: Pixel_4_API_30
-          script: |
-           mvn -Dtest=appium.MobileTesting.Logintest test
+          api-level: 29
+          script: ./gradlew test -Dtest=appium.MobileTesting.Logintest
