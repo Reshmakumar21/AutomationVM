@@ -15,7 +15,7 @@ jobs:
 
       - name: Install Android SDK
         run: |
-          wget -q https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip -O android-sdk-tools.zip
+          wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -O android-sdk-tools.zip
           unzip -qq android-sdk-tools.zip -d $HOME/android-sdk
           echo "export ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
           echo "export PATH=$HOME/android-sdk/tools/bin:$PATH" >> $GITHUB_ENV
@@ -24,7 +24,7 @@ jobs:
         run: yes | sdkmanager --licenses
 
       - name: Create Android emulator
-        run: echo no | avdmanager create avd -n emulatortest2 -k "system-images;android-29;google_apis;x86"
+        run: echo no | avdmanager create avd -n test-emulator -k "system-images;android-29;google_apis;x86"
 
       - name: Launch Android emulator
-        run: $ANDROID_HOME/emulator/emulator -avd emulatortest2 -no-audio -no-window &
+        run: $ANDROID_HOME/emulator/emulator -avd test-emulator -no-audio -no-window &
