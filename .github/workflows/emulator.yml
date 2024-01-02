@@ -1,40 +1,42 @@
-name: Run Appium 
+name: Launch Android Emulator
 
 on:
   workflow_dispatch:
 
 jobs:
-  build-and-test:
-    runs-on: windows-latest
+  emulator:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      - name: Set up JDK 1.8
+      - name: Set up JDK
         uses: actions/setup-java@v1
         with:
-          java-version: 1.8
+          java-version: '8'
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14'
 
-      - name: Install Appium
-        run: npm install -g appium@2
-          
-      - name: Display Appium Version
-        run: appium -v
-        
-      - name: Install UIAutomator2 driver
-        run: appium driver install uiautomator2
-
-      - name: Set up Emulator
+      - name: Download Android SDK tools
         run: |
-          echo no | $env:ANDROID_HOME\tools\bin\avdmanager create avd -n emulatortest2 -k "system-images;android-29;google_apis;x86"
-          $env:ANDROID_HOME\emulator\emulator -avd emulatortest2 -no-audio -no-window
-          adb devices
+          wget https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip -O android-sdk-tools.zip
+          mkdir -p $HOME/android-sdk/cmdline-tools
+          unzip -q android-sdk-tools.zip -d $HOME/android-sdk/cmdline-tools
+          echo "export ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
+          echo "export PATH=$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools:$PATH" >> $GITHUB_ENV
 
-      - name: Run Appium Tests
-        run: mvn -Dtest=appium.MobileTesting.Logintest test
+      - name: Accept Android licenses
+        run: yes | $HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --licenses
+
+      - name: Install system image
+        run: $HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager "system-images;android-29;google_apis;x86"
+
+      - name: Create emulator
+        run: echo no | $HOME/android-sdk/cmdline-tools/latest/bin/avdmanager create avd -n emulatortest -k "system-images;android-29;google_apis;x86"
+
+      - name: Launch emulator
+        run: $HOME/android-sdk/emulator/emulator -avd emulatortest -no-audio -no-window
