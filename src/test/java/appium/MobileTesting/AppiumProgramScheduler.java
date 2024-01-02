@@ -15,7 +15,7 @@ public class AppiumProgramScheduler {
             public void run() {
                 try {
                 	System.out.println("Executing Appium test every 15 minutes");
-					Logintest.appiumtest1();
+					Logintest.testAppium1();
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

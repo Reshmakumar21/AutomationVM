@@ -8,14 +8,15 @@ import io.appium.java_client.android.AndroidDriver;
 public class Logintest{
     
   @Test
-  public static void appiumtest1() throws IOException, InterruptedException {
+  public static void testAppium1() throws IOException, InterruptedException {
 	  
 	  //launching emulator and waiting for boot completion
-	  //AppiumSetup.launchEmulator();
-	  //AppiumSetup.waitForEmulator();
+	  AppiumSetup.launchEmulator();
+	  AppiumSetup.waitForEmulator();
+	  //AppiumSetup.setEmulatorTimezone();
 	  
 	  //starting the appium server and verifying if it is listening in the required IP and port
-	  //AppiumSetup.server();
+	  AppiumSetup.server();
 	  
 	  //initiating Android driver instance
 	  AndroidDriver driver = AppiumSetup.initiateDriver();
@@ -23,6 +24,11 @@ public class Logintest{
 	  
 	  //login
 	  MobileActions.login(driver);
+  }
+  
+  @Test
+  public void testAppium2() {
+	  
   }
 }
 

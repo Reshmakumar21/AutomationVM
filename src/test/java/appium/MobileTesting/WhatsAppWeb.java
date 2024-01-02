@@ -6,11 +6,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.Test;
 
 public class WhatsAppWeb {
 
-	@Test
     public static void whatsappAutomation() throws InterruptedException {
         // Set ChromeDriver path
         System.setProperty("webdriver.chrome.driver", 

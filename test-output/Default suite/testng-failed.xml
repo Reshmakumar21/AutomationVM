@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="appium.MobileTesting.WhatsAppWeb">
+      <class name="appium.MobileTesting.Logintest">
         <methods>
-          <include name="whatsappAutomation"/>
+          <include name="testAppium1"/>
         </methods>
-      </class> <!-- appium.MobileTesting.WhatsAppWeb -->
+      </class> <!-- appium.MobileTesting.Logintest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -62,6 +62,32 @@ public class AppiumSetup {
     }
    }
     
+    public static void setEmulatorTimezone() {
+        String emulatorId = "emulator-5554"; // Replace with your emulator ID
+        String timezone = "Asia/Kolkata"; // Replace with your desired timezone
+
+        try {
+            String command = "adb -s " + emulatorId + " shell setprop persist.sys.timezone " + timezone;
+            Process process = Runtime.getRuntime().exec(command);
+
+            BufferedReader errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+            String errorLine;
+            while ((errorLine = errorReader.readLine()) != null) {
+                System.out.println("Error: " + errorLine); // Print ADB error output
+            }
+
+            int exitCode = process.waitFor();
+            if (exitCode == 0) {
+                System.out.println("Timezone set to " + timezone + " for emulator " + emulatorId);
+            } else {
+                System.out.println("Failed to set timezone for emulator " + emulatorId);
+            }
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    
  	public static void startServer() throws IOException, InterruptedException {
   		Runtime runtime = Runtime.getRuntime();
         runtime.exec("cmd.exe /c start cmd.exe /k appium");
@@ -88,7 +114,6 @@ public class AppiumSetup {
   	  options.setApp("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//consumer-app.apk");
   	  AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
 
-  	  
   	  return driver;
     }
     
