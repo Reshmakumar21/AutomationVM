@@ -9,22 +9,19 @@ jobs:
 
     steps:
       - name: Set up Android SDK
-        uses: actions/setup-java@v1
-        with:
-          java-version: 1.8
-
-      - name: Install Android SDK
         run: |
-          wget -q https://dl.google.com/android/repository/commandlinetools-mac-6609375_latest.zip -O android-sdk-tools.zip
-          unzip -qq android-sdk-tools.zip -d $HOME/android-sdk
-          echo "export ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
-          echo "export PATH=$HOME/android-sdk/cmdline-tools/latest/bin:$PATH" >> $GITHUB_ENV
+          mkdir -p $HOME/android-sdk/cmdline-tools
+          cd $HOME/android-sdk/cmdline-tools
+          wget -q https://dl.google.com/android/repository/commandlinetools-mac-6609375_latest.zip -O tools.zip
+          unzip -qq tools.zip
+          mv cmdline-tools/* latest/
+          rm -rf cmdline-tools tools.zip
 
       - name: Accept Android licenses
-        run: yes | sdkmanager --licenses
+        run: yes | $HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --licenses
 
       - name: Create Android emulator
-        run: echo no | avdmanager create avd -n emulatortest2 -k "system-images;android-29;google_apis;x86"
+        run: echo no | $HOME/android-sdk/cmdline-tools/latest/bin/avdmanager create avd -n emulatortest2 -k "system-images;android-29;google_apis;x86"
 
       - name: Launch Android emulator
-        run: $ANDROID_HOME/emulator/emulator -avd emulatortest2 -no-audio -no-window &
+        run: $HOME/android-sdk/cmdline-tools/latest/bin/emulator -avd emulatortest2 -no-audio -no-window &
