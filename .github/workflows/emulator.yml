@@ -1,42 +1,29 @@
-name: Launch Android Emulator
+name: Run Appium Test Every 15 Minutes
 
 on:
   workflow_dispatch:
+    
 
 jobs:
-  emulator:
-    runs-on: ubuntu-latest
+  build-and-test:
+    runs-on: macos-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Set up JDK
-        uses: actions/setup-java@v1
-        with:
-          java-version: '8'
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Download Android SDK tools
+      - name: Set up Appium
         run: |
-          wget https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip -O android-sdk-tools.zip
-          mkdir -p $HOME/android-sdk/cmdline-tools
-          unzip -q android-sdk-tools.zip -d $HOME/android-sdk/cmdline-tools
-          echo "export ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
-          echo "export PATH=$HOME/android-sdk/tools:$HOME/android-sdk/platform-tools:$PATH" >> $GITHUB_ENV
+          npm install -g appium@2
+          appium -v
+          appium &>/dev/null &
 
-      - name: Accept Android licenses
-        run: yes | $HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager --licenses
-
-      - name: Install system image
-        run: $HOME/android-sdk/cmdline-tools/latest/bin/sdkmanager "system-images;android-29;google_apis;x86"
-
-      - name: Create emulator
-        run: echo no | $HOME/android-sdk/cmdline-tools/latest/bin/avdmanager create avd -n emulatortest -k "system-images;android-29;google_apis;x86"
-
-      - name: Launch emulator
-        run: $HOME/android-sdk/emulator/emulator -avd emulatortest -no-audio -no-window
+      - name: Set up UIAutomator2
+        run: |
+          appium driver install uiautomator2
+  
+      - name: run tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          script: mvn clean test
