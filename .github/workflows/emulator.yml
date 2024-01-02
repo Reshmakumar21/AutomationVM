@@ -1,14 +1,11 @@
-name: Run Appium Test Every 15 Minutes
+name: Run Appium Test
 
 on:
-  # Uncomment the next line to schedule the workflow every 15 minutes
-  # schedule:
-  #   - cron: '*/15 * * * *'  # Cron expression to trigger every 15 minutes
   workflow_dispatch:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
@@ -35,9 +32,8 @@ jobs:
 
       - name: Set up Emulator
         run: |
-          echo no | $ANDROID_HOME/tools/bin/avdmanager create avd -n emulatortest2 -k "system-images;android-29;google_apis;x86"
-          $ANDROID_HOME/emulator/emulator -avd emulatortest2 -no-audio -no-window &
-          android-wait-for-emulator
+          echo no | %ANDROID_HOME%\tools\bin\avdmanager create avd -n emulatortest2 -k "system-images;android-29;google_apis;x86"
+          %ANDROID_HOME%\emulator\emulator -avd emulatortest2 -no-audio -no-window
           adb devices
 
       - name: Run Appium Tests
