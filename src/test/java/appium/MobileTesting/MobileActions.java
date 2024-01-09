@@ -85,6 +85,7 @@ public class MobileActions {
 	}
 	public static void login(AndroidDriver driver) throws IOException, InterruptedException {
 		String path = createScreenshotsFolder(System.getProperty("user.dir") + "/Results");
+		testResult(driver);
 		takeScreenshot(driver,path);
 		MobileUI.btn_menu(driver).click();
 		takeScreenshot(driver,path);
