@@ -36,5 +36,4 @@ jobs:
          with:
           api-level: 29
           script: |
-                  appium driver list
-                  mvn -X test
+                  mvn clean test
