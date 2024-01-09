@@ -5,17 +5,13 @@ on:
     #- cron: '*/15 * * * *'  # Cron expression to trigger every 15 minutes
   
   workflow_dispatch:
-<<<<<<< HEAD
-    
-=======
->>>>>>> 58e2820faf85d89dce13357acac1d3cb005f3f46
 
 jobs:
   build-and-test:
     runs-on: macos-latest
 
     steps:
-<<<<<<< HEAD
+
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -49,29 +45,28 @@ jobs:
 
       #- name: Run Appium test
        # run: java -cp "src/test/java" appium.MobileTesting.Logintest
-=======
-       - name: Set up Java 11
-         uses: actions/setup-java@v4
-         with:
+
+      - name: Set up Java 11
+        uses: actions/setup-java@v4
+        with:
             distribution: 'temurin'
             java-version: '21'
             
-       - name: Checkout code
-         uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
         
-       - name: Set up Appium
-         run: |
+      - name: Set up Appium
+        run: |
            npm install -g appium@2
            appium -v
            appium &>/dev/null &
 
-       - name: Set up UIAutomator2
-         run: |
+      - name: Set up UIAutomator2
+        run: |
           appium driver install uiautomator2
   
-       - name: run tests
-         uses: reactivecircus/android-emulator-runner@v2
-         with:
+      - name: run tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
           api-level: 29
           script: mvn clean test
->>>>>>> 58e2820faf85d89dce13357acac1d3cb005f3f46
