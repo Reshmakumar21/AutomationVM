@@ -1,3 +1,19 @@
+<<<<<<< HEAD
 2024/01/02-18:28:05.949 794 Reusing MANIFEST C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting\src\whatsappbot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
 2024/01/02-18:28:05.951 794 Recovering log #5279
 2024/01/02-18:28:05.953 794 Reusing old log C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting\src\whatsappbot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/005279.log 
+=======
+2024/01/02-15:18:42.126 3b48 Reusing MANIFEST C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting\src\whatsappbot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/01/02-15:18:42.135 3b48 Recovering log #5279
+2024/01/02-15:18:42.137 3b48 Reusing old log C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting\src\whatsappbot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/005279.log 
+2024/01/02-15:18:43.712 7f8 Compacting 1@1 + 3@2 files
+2024/01/02-15:18:43.800 7f8 Generated table #5285@1: 83172 keys, 2252189 bytes
+2024/01/02-15:18:43.852 7f8 Generated table #5286@1: 38339 keys, 2203639 bytes
+2024/01/02-15:18:43.899 7f8 Generated table #5287@1: 33501 keys, 2187317 bytes
+2024/01/02-15:18:43.900 7f8 Compacted 1@1 + 3@2 files => 6643145 bytes
+2024/01/02-15:18:43.901 7f8 compacted to: files[ 0 2 33 0 0 0 0 ]
+2024/01/02-15:18:43.902 7f8 Delete type=2 #5244
+2024/01/02-15:18:43.902 7f8 Delete type=2 #5245
+2024/01/02-15:18:43.902 7f8 Delete type=2 #5246
+2024/01/02-15:18:43.902 7f8 Delete type=2 #5281
+>>>>>>> 58e2820faf85d89dce13357acac1d3cb005f3f46

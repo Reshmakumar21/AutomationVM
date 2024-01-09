@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2024/01/04-14:25:57.839 40d8 Reusing MANIFEST C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting\src\whatsappbot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
 2024/01/04-14:25:57.841 40d8 Recovering log #5279
 2024/01/04-14:25:57.843 40d8 Reusing old log C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting\src\whatsappbot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/005279.log 
@@ -380,3 +381,8 @@
 2024/01/04-14:26:51.181 40d8 Level-0 table #5439: started
 2024/01/04-14:26:51.219 40d8 Level-0 table #5439: 1131126 bytes OK
 2024/01/04-14:26:51.222 40d8 Delete type=0 #5428
+=======
+2024/01/02-18:28:05.949 794 Reusing MANIFEST C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting\src\whatsappbot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/01/02-18:28:05.951 794 Recovering log #5279
+2024/01/02-18:28:05.953 794 Reusing old log C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting\src\whatsappbot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/005279.log 
+>>>>>>> 58e2820faf85d89dce13357acac1d3cb005f3f46

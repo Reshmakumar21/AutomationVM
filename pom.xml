@@ -15,13 +15,21 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	<java-version>11</java-version>
+<<<<<<< HEAD
 <suiteXmlFile>testng.xml</suiteXmlFile>
+=======
+<suiteXmlFile>src/test/resource/Logintest.xml</suiteXmlFile>
+>>>>>>> 58e2820faf85d89dce13357acac1d3cb005f3f46
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
   </properties>
 
   <dependencies> 
+<<<<<<< HEAD
   	<!--dependency>
+=======
+  	<dependency>
+>>>>>>> 58e2820faf85d89dce13357acac1d3cb005f3f46
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
     <version>3.0.0-M5</version>
@@ -30,10 +38,17 @@
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-compiler-plugin</artifactId>
     <version>3.5.1</version>
+<<<<<<< HEAD
 </dependency-->
 
 	
     <!--dependency>
+=======
+</dependency>
+
+	
+    <dependency>
+>>>>>>> 58e2820faf85d89dce13357acac1d3cb005f3f46
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
       <version>5.7.1</version>
@@ -44,7 +59,11 @@
       <artifactId>junit-jupiter-params</artifactId>
       <version>5.7.1</version>
       <scope>test</scope>
+<<<<<<< HEAD
     </dependency-->
+=======
+    </dependency>
+>>>>>>> 58e2820faf85d89dce13357acac1d3cb005f3f46
     <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
 	<dependency>
     	<groupId>io.appium</groupId>
@@ -80,7 +99,11 @@
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+<<<<<<< HEAD
         <version>3.7.0</version>
+=======
+        <version>3.5.1</version>
+>>>>>>> 58e2820faf85d89dce13357acac1d3cb005f3f46
         <configuration>
 					<source>11</source>
 					<target>11</target>		
@@ -89,12 +112,22 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
+<<<<<<< HEAD
         <version>3.0.0-M7</version>
         <configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>	
 					 </suiteXmlFiles>
 		</configuration>
+=======
+        <version>3.0.0-M5</version>
+        <configuration>
+					<suiteXmlFiles>
+						${suiteXmlFile}
+					</suiteXmlFiles>
+					
+				</configuration>
+>>>>>>> 58e2820faf85d89dce13357acac1d3cb005f3f46
       </plugin>
     </plugins>
   </build>

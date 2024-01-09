@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 2024/01/04-14:25:57.173 16c4 Reusing MANIFEST C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting\src\whatsappbot\Default\shared_proto_db/MANIFEST-000001
 2024/01/04-14:25:57.173 16c4 Recovering log #3
 2024/01/04-14:25:57.175 16c4 Reusing old log C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting\src\whatsappbot\Default\shared_proto_db/000003.log 
+=======
+2024/01/02-18:28:05.397 4554 Reusing MANIFEST C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting\src\whatsappbot\Default\shared_proto_db/MANIFEST-000001
+2024/01/02-18:28:05.397 4554 Recovering log #3
+2024/01/02-18:28:05.400 4554 Reusing old log C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting\src\whatsappbot\Default\shared_proto_db/000003.log 
+>>>>>>> 58e2820faf85d89dce13357acac1d3cb005f3f46
