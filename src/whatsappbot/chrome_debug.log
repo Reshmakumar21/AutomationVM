@@ -1,0 +1,12 @@
+[16536:2416:0104/142556.766:WARNING:chrome_main_delegate.cc(667)] This is Chrome version 120.0.6099.130 (not a warning)
+[16536:2416:0104/142556.895:INFO:policy_logger.cc(144)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(168) Starting CBCM Controller Initialization
+[16536:2416:0104/142556.896:INFO:policy_logger.cc(144)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(196) No machine level policy manager exists.
+[16536:2416:0104/142558.476:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[16536:10112:0104/142623.884:ERROR:backend_impl.cc(984)] Critical error found -8
+[16536:10112:0104/142623.885:WARNING:storage_block-inl.h(142)] Failed data load.
+[16536:10112:0104/142623.886:ERROR:entry_impl.cc(949)] Failed to save user data
+[16536:5972:0104/142626.915:WARNING:page_discarding_helper.cc(126)] Discarding multiple pages with target (kb): 0
+[16536:10112:0104/142627.671:ERROR:backend_impl.cc(984)] Critical error found -8
+[16536:9032:0104/142631.918:WARNING:page_discarding_helper.cc(126)] Discarding multiple pages with target (kb): 0
+[16536:5972:0104/142636.918:WARNING:page_discarding_helper.cc(126)] Discarding multiple pages with target (kb): 0
+[16536:2416:0104/142651.385:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
