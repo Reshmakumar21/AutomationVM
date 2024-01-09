@@ -23,7 +23,7 @@ public class MobileUI {
 	public static WebElement btn_username(AndroidDriver driver) {
 
 		System.out.println("entering user name");
-		return MobileActions.getWhenVisible(By.id("cx.indianoil.in:id/email"),driver);
+		return MobileActions.getWhenVisible(By.xpath("//android.widget.EditText[@resource-id='cx.indianoil.in:id/email']"),driver);
 	}
 
 	public static WebElement btn_password(AndroidDriver driver) {
