@@ -26,8 +26,11 @@ jobs:
        - name: Set up UIAutomator2
          run: |
           appium driver install uiautomator2
+          
+       - name: Start Appium server
+         run: |
           appium &>/dev/null &
-  
+
        - name: run tests
          uses: reactivecircus/android-emulator-runner@v2
          with:
