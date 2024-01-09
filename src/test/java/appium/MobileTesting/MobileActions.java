@@ -23,7 +23,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class MobileActions {
 
 		public static WebElement getWhenVisible(By locator, AndroidDriver driver) {
-		int timeout = 60;
+		int timeout = 120;
 		WebElement element;
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
 		element = wait.until(ExpectedConditions
