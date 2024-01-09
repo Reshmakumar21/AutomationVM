@@ -105,6 +105,6 @@ public class MobileActions {
 			e.printStackTrace();
 		}
 		testResult(driver);
-		WhatsAppWeb.whatsappAutomation();
+		//WhatsAppWeb.whatsappAutomation();
 	}
 }
