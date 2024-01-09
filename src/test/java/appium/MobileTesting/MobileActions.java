@@ -72,7 +72,7 @@ public class MobileActions {
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
         // Replace this path with your image file's path
-        String imagePath = "C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//test-result.png";
+	String imagePath = System.getProperty("user.dir") + "/test-result.png";
 
         try {
             // Save the screenshot to the desired location (overwrite the existing file)
@@ -84,7 +84,7 @@ public class MobileActions {
 
 	}
 	public static void login(AndroidDriver driver) throws IOException, InterruptedException {
-		String path = createScreenshotsFolder("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//Results");
+		String path = createScreenshotsFolder(System.getProperty("user.dir") + "/Results");
 		//takeScreenshot(driver,path);
 		MobileUI.btn_menu(driver).click();
 		//takeScreenshot(driver,path);
