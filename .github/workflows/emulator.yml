@@ -26,10 +26,12 @@ jobs:
 
        - name: Set up UIAutomator2
          run: |
-          appium driver install uiautomator2
+          appium driver install UIAutomator2
   
        - name: run tests
          uses: reactivecircus/android-emulator-runner@v2
          with:
           api-level: 29
-          script: mvn clean test
+          script: |
+                  appium driver --list installed
+                  mvn clean test
