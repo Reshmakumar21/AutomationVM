@@ -1,4 +1,4 @@
-name: Appium test 
+name: Trigger every 15 mins
 
 on:
  #schedule:
