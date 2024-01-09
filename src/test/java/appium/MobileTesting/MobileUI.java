@@ -6,6 +6,13 @@ import org.openqa.selenium.WebElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class MobileUI {
+
+	public static WebElement btn_newcon(AndroidDriver driver) {
+
+		return MobileActions.getWhenVisible(By.
+				xpath("//android.widget.TextView[@resource-id='cx.indianoil.in:id/text_card_cylinder']"), driver);
+	}
+	
 	
 	public static WebElement btn_menu(AndroidDriver driver) {
 
@@ -23,7 +30,7 @@ public class MobileUI {
 	public static WebElement btn_username(AndroidDriver driver) {
 
 		System.out.println("entering user name");
-		return MobileActions.getWhenVisible(By.id("cx.indianoil.in:id/email"),driver);
+		return MobileActions.getWhenVisible(By.xpath("//android.widget.EditText[@resource-id='cx.indianoil.in:id/email']"),driver);
 	}
 
 	public static WebElement btn_password(AndroidDriver driver) {

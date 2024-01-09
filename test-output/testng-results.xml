@@ -1,63 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-04T08:52:55Z" name="Default suite" finished-at="2024-01-04T08:56:51Z" duration-ms="235938">
+  <suite started-at="2024-01-09T12:44:33Z" name="Default suite" finished-at="2024-01-09T12:46:02Z" duration-ms="89486">
     <groups>
     </groups>
-    <test started-at="2024-01-04T08:52:55Z" name="Default test" finished-at="2024-01-04T08:56:51Z" duration-ms="235938">
+    <test started-at="2024-01-09T12:44:33Z" name="Default test" finished-at="2024-01-09T12:46:02Z" duration-ms="89486">
       <class name="appium.MobileTesting.Logintest">
-        <test-method signature="testAppium1()[pri:0, instance:appium.MobileTesting.Logintest@5bf0fe62]" started-at="2024-01-04T08:52:55Z" name="testAppium1" finished-at="2024-01-04T08:56:51Z" duration-ms="235918" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAppium1 -->
-        <test-method signature="testAppium2()[pri:0, instance:appium.MobileTesting.Logintest@5bf0fe62]" started-at="2024-01-04T08:56:51Z" name="testAppium2" finished-at="2024-01-04T08:56:51Z" duration-ms="0" status="PASS">
-=======
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2024-01-02T12:53:48Z" name="Default suite" finished-at="2024-01-02T12:58:23Z" duration-ms="275333">
-    <groups>
-    </groups>
-    <test started-at="2024-01-02T12:53:48Z" name="Default test" finished-at="2024-01-02T12:58:23Z" duration-ms="275333">
-      <class name="appium.MobileTesting.Logintest">
-        <test-method signature="testAppium1()[pri:0, instance:appium.MobileTesting.Logintest@d41f816]" started-at="2024-01-02T12:53:48Z" name="testAppium1" finished-at="2024-01-02T12:58:23Z" duration-ms="275305" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method signature="testAppium1()[pri:0, instance:appium.MobileTesting.Logintest@70f02c32]" started-at="2024-01-09T12:44:33Z" name="testAppium1" finished-at="2024-01-09T12:46:02Z" duration-ms="89456" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[unknown error: net::ERR_NAME_NOT_RESOLVED
-  (Session info: chrome=120.0.6099.130)
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.LinearLayout[@resource-id='cx.indianoil.in:id/locateus_layout']/android.widget.ImageView (tried for 60 second(s) with 500 milliseconds interval)
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7b4d23700b6b6a17ad0f5f22e432f089, get {url=https://web.whatsapp.com/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C://Users//0047HE744//Deskt...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59782}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59782/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7b4d23700b6b6a17ad0f5f22e432f089]]>
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:appPackage: cx.indianoil.in, appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\0047HE744\Desktop\..., autoGrantPermissions: true, automationName: UIAutomator2, deviceName: emulatortest2, platformName: ANDROID}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 14, appium:statBarHeight: 98, appium:takesScreenshot: true, appium:viewportRect: {height: 2858, left: 0, top: 98, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 2db82552-ad89-4599-a28a-9f1ddc76776a]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_NAME_NOT_RESOLVED
-  (Session info: chrome=120.0.6099.130)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.LinearLayout[@resource-id='cx.indianoil.in:id/locateus_layout']/android.widget.ImageView (tried for 60 second(s) with 500 milliseconds interval)
 Build info: version: '4.16.1', revision: '9b4c83354e'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7b4d23700b6b6a17ad0f5f22e432f089, get {url=https://web.whatsapp.com/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C://Users//0047HE744//Deskt...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59782}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59782/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7b4d23700b6b6a17ad0f5f22e432f089
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:305)
-at appium.MobileTesting.WhatsAppWeb.whatsappAutomation(WhatsAppWeb.java:25)
-at appium.MobileTesting.MobileActions.login(MobileActions.java:108)
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:appPackage: cx.indianoil.in, appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\0047HE744\Desktop\..., autoGrantPermissions: true, automationName: UIAutomator2, deviceName: emulatortest2, platformName: ANDROID}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 14, appium:statBarHeight: 98, appium:takesScreenshot: true, appium:viewportRect: {height: 2858, left: 0, top: 98, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 2db82552-ad89-4599-a28a-9f1ddc76776a
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+at appium.MobileTesting.MobileActions.getWhenVisible(MobileActions.java:29)
+at appium.MobileTesting.MobileUI.btn_locateus(MobileUI.java:51)
+at appium.MobileTesting.MobileActions.login(MobileActions.java:104)
 at appium.MobileTesting.Logintest.testAppium1(Logintest.java:26)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -86,15 +57,10 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAppium1 -->
-        <test-method signature="testAppium2()[pri:0, instance:appium.MobileTesting.Logintest@d41f816]" started-at="2024-01-02T12:58:23Z" name="testAppium2" finished-at="2024-01-02T12:58:23Z" duration-ms="0" status="PASS">
->>>>>>> 58e2820faf85d89dce13357acac1d3cb005f3f46
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAppium2 -->
       </class> <!-- appium.MobileTesting.Logintest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
