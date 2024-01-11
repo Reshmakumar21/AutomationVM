@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\0047HE744\AppData\Local\Temp\testng-eclipse-1796608817\testng-customsuite.xml</span>
+                    <span>C:\Users\0047HE744\AppData\Local\Temp\testng-eclipse--988847484\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -128,18 +128,30 @@
                   <a name="testAppium1">
                   </a> <!-- testAppium1 -->
                   <span class="method-name">testAppium1</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.LinearLayout[@resource-id=&apos;cx.indianoil.in:id/locateus_layout&apos;]/android.widget.ImageView (tried for 120 second(s) with 500 milliseconds interval)
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The application at &apos;C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting/consumer-app.apk&apos; does not exist or is not accessible 
+Host info: host: &apos;IBM-965GDN3&apos;, ip: &apos;192.168.0.190&apos;
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:appPackage: cx.indianoil.in, appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\0047HE744\Desktop\..., autoGrantPermissions: true, automationName: UIAutomator2, deviceName: emulatortest2, platformName: ANDROID}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 14, appium:statBarHeight: 98, appium:takesScreenshot: true, appium:viewportRect: {height: 2858, left: 0, top: 98, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: a88e8fad-4f49-4de8-8fed-9cbada9dfebb
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at appium.MobileTesting.MobileActions.getWhenVisible(MobileActions.java:29)
-	at appium.MobileTesting.MobileUI.btn_locateus(MobileUI.java:51)
-	at appium.MobileTesting.MobileActions.login(MobileActions.java:109)
-	at appium.MobileTesting.Logintest.testAppium1(Logintest.java:26)
+Command: [null, newSession {capabilities=[{appium:autoGrantPermissions=true, appium:deviceName=emulatortest2, platformName=ANDROID, appium:automationName=UIAutomator2, appium:app=C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting/consumer-app.apk}], desiredCapabilities=Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:deviceName: emulatortest2, platformName: ANDROID}}]
+Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:deviceName: emulatortest2, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:177)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:164)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at appium.MobileTesting.AppiumSetup.initiateDriver(AppiumSetup.java:118)
+	at appium.MobileTesting.Logintest.testAppium1(Logintest.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -174,7 +186,7 @@ Session ID: a88e8fad-4f49-4de8-8fed-9cbada9dfebb
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\0047HE744\AppData\Local\Temp\testng-eclipse-1796608817\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\0047HE744\AppData\Local\Temp\testng-eclipse--988847484\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -227,12 +239,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testAppium1')
 data.setCell(0, 2, 'appium.MobileTesting.Logintest')
-data.setCell(0, 3, 148574);
+data.setCell(0, 3, 184537);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
