@@ -72,12 +72,12 @@ public class MobileActions {
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
         // Replace this path with your image file's path
-<<<<<<< HEAD
+
         //String imagePath = "C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//test-result.png";
 		String imagePath = System.getProperty("user.dir") + "/test-result.png";
-=======
-	String imagePath = System.getProperty("user.dir") + "/test-result.png";
->>>>>>> 7a62d55d5792d5b84b70f1517588f5d906270ccb
+
+
+
 
         try {
             // Save the screenshot to the desired location (overwrite the existing file)
@@ -89,7 +89,7 @@ public class MobileActions {
 
 	}
 	public static void login(AndroidDriver driver) throws IOException, InterruptedException {
-<<<<<<< HEAD
+
 		//String path = createScreenshotsFolder("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//Results");
 		String path = createScreenshotsFolder(System.getProperty("user.dir") + "/Results");
 		MobileUI.btn_newcon(driver).isDisplayed();
@@ -98,19 +98,8 @@ public class MobileActions {
 		testResult(driver);
 		//takeScreenshot(driver,path);
 		MobileUI.btn_login(driver).click();
-		takeScreenshot(driver,path);
-	
+		takeScreenshot(driver,path);		
 
-=======
-		String path = createScreenshotsFolder(System.getProperty("user.dir") + "/Results");
-		testResult(driver);
-		takeScreenshot(driver,path);
-		MobileUI.btn_menu(driver).click();
-		takeScreenshot(driver,path);
-		MobileUI.btn_login(driver).click();
-		takeScreenshot(driver,path);
-		
->>>>>>> 7a62d55d5792d5b84b70f1517588f5d906270ccb
 		MobileUI.btn_username(driver).sendKeys("9445332945");
 		MobileUI.btn_password(driver).sendKeys("Venki00*");
 		takeScreenshot(driver,path);
