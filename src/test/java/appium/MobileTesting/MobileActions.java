@@ -92,7 +92,7 @@ public class MobileActions {
 
 		//String path = createScreenshotsFolder("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//Results");
 		String path = createScreenshotsFolder(System.getProperty("user.dir") + "/Results");
-		MobileUI.btn_newcon(driver).isDisplayed();
+		//MobileUI.btn_newcon(driver).isDisplayed();
 		//takeScreenshot(driver,path);
 		MobileUI.btn_menu(driver).click();
 		testResult(driver);
