@@ -90,16 +90,17 @@ public class MobileActions {
 		MobileUI.btn_newcon(driver).isDisplayed();
 		//takeScreenshot(driver,path);
 		MobileUI.btn_menu(driver).click();
+		testResult(driver);
 		//takeScreenshot(driver,path);
-		MobileUI.btn_login(driver).isDisplayed();
 		MobileUI.btn_login(driver).click();
-		//takeScreenshot(driver,path);
-		MobileUI.btn_submit(driver).isDisplayed();
+		takeScreenshot(driver,path);
+	
 
 		MobileUI.btn_username(driver).sendKeys("9445332945");
 		MobileUI.btn_password(driver).sendKeys("Venki00*");
 		
 		MobileUI.btn_submit(driver).click();
+		
 		takeScreenshot(driver,path);
 		MobileUI.btn_locateus(driver).click();
 		takeScreenshot(driver,path);
