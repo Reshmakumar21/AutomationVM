@@ -76,6 +76,9 @@ public class MobileActions {
         //String imagePath = "C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//test-result.png";
 		String imagePath = System.getProperty("user.dir") + "/test-result.png";
 
+
+
+
         try {
             // Save the screenshot to the desired location (overwrite the existing file)
             ImageIO.write(ImageIO.read(screenshot), "png", new File(imagePath));
@@ -90,13 +93,13 @@ public class MobileActions {
 		//String path = createScreenshotsFolder("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//Results");
 		String path = createScreenshotsFolder(System.getProperty("user.dir") + "/Results");
 		MobileUI.btn_newcon(driver).isDisplayed();
-		takeScreenshot(driver,path);
+		//takeScreenshot(driver,path);
 		MobileUI.btn_menu(driver).click();
 		testResult(driver);
-		takeScreenshot(driver,path);
+		//takeScreenshot(driver,path);
 		MobileUI.btn_login(driver).click();
-		takeScreenshot(driver,path);
-	
+		takeScreenshot(driver,path);		
+
 		MobileUI.btn_username(driver).sendKeys("9445332945");
 		MobileUI.btn_password(driver).sendKeys("Venki00*");
 		takeScreenshot(driver,path);
@@ -113,7 +116,6 @@ public class MobileActions {
 			e.printStackTrace();
 		}
 		testResult(driver);
-		takeScreenshot(driver,path);
 		//WhatsAppWeb.whatsappAutomation();
 	}
 }
