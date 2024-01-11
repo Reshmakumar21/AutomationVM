@@ -15,7 +15,7 @@ jobs:
          uses: actions/setup-java@v4
          with:
             distribution: 'temurin'
-            java-version: '21'
+            java-version: '11'
             
        - name: Checkout code
          uses: actions/checkout@v3
@@ -24,14 +24,18 @@ jobs:
          run: |
            npm install -g appium@2
            appium -v
-           appium &>/dev/null &
 
        - name: Set up UIAutomator2
          run: |
           appium driver install uiautomator2
-  
+          
+       - name: Start Appium server
+         run: |
+          appium &>/dev/null &
+
        - name: run tests
          uses: reactivecircus/android-emulator-runner@v2
          with:
           api-level: 29
-          script: mvn clean test
+          script: |
+                  mvn clean test
