@@ -12,11 +12,11 @@ public class Logintest{
 	  
 	  //launching emulator and waiting for boot completion
 	  //AppiumSetup.launchEmulator();
-	  AppiumSetup.waitForEmulator();
+	  //AppiumSetup.waitForEmulator();
 	  //AppiumSetup.setEmulatorTimezone();
 	  
 	  //starting the appium server and verifying if it is listening in the required IP and port
-	  AppiumSetup.server();
+	  //AppiumSetup.server();
 	  
 	  //initiating Android driver instance
 	  AndroidDriver driver = AppiumSetup.initiateDriver();
