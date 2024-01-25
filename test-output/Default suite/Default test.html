@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jan 11 20:13:30 IST 2024</td>
+<td>Started on:</td><td>Thu Jan 25 13:43:08 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>184 seconds (184561 ms)</td>
+<tr><td>Total time:</td><td>149 seconds (149583 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,30 +76,18 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='appium.MobileTesting.Logintest.testAppium1()'><b>testAppium1</b><br>Test class: appium.MobileTesting.Logintest</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The application at &apos;C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting/consumer-app.apk&apos; does not exist or is not accessible 
-Host info: host: &apos;IBM-965GDN3&apos;, ip: &apos;192.168.0.190&apos;
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.LinearLayout[@resource-id=&apos;cx.indianoil.in:id/locateus_layout&apos;]/android.widget.ImageView (tried for 120 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[{appium:autoGrantPermissions=true, appium:deviceName=emulatortest2, platformName=ANDROID, appium:automationName=UIAutomator2, appium:app=C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting/consumer-app.apk}], desiredCapabilities=Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:deviceName: emulatortest2, platformName: ANDROID}}]
-Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:deviceName: emulatortest2, platformName: ANDROID}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:177)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:164)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at appium.MobileTesting.AppiumSetup.initiateDriver(AppiumSetup.java:118)
-	at appium.MobileTesting.Logintest.testAppium1(Logintest.java:22)
+Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:appPackage: cx.indianoil.in, appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\0047HE744\Desktop\..., autoGrantPermissions: true, automationName: UIAutomator2, deviceName: emulatortest2, platformName: ANDROID}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 14, appium:statBarHeight: 98, appium:takesScreenshot: true, appium:viewportRect: {height: 2858, left: 0, top: 98, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 740be5c3-4691-4aa8-9b4b-cfe8c165392b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at appium.MobileTesting.MobileActions.getWhenVisible(MobileActions.java:29)
+	at appium.MobileTesting.MobileUI.btn_locateus(MobileUI.java:56)
+	at appium.MobileTesting.MobileActions.login(MobileActions.java:110)
+	at appium.MobileTesting.Logintest.testAppium1(Logintest.java:26)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -125,31 +113,19 @@ Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:autoGrantPermis
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace401891515", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace401891515'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The application at &apos;C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting/consumer-app.apk&apos; does not exist or is not accessible 
-Host info: host: &apos;IBM-965GDN3&apos;, ip: &apos;192.168.0.190&apos;
+</pre></div><a href='#' onClick='toggleBox("stack-trace1136503323", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1136503323'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.LinearLayout[@resource-id=&apos;cx.indianoil.in:id/locateus_layout&apos;]/android.widget.ImageView (tried for 120 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[{appium:autoGrantPermissions=true, appium:deviceName=emulatortest2, platformName=ANDROID, appium:automationName=UIAutomator2, appium:app=C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting/consumer-app.apk}], desiredCapabilities=Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:deviceName: emulatortest2, platformName: ANDROID}}]
-Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:deviceName: emulatortest2, platformName: ANDROID}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:177)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:164)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at appium.MobileTesting.AppiumSetup.initiateDriver(AppiumSetup.java:118)
-	at appium.MobileTesting.Logintest.testAppium1(Logintest.java:22)
+Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:appPackage: cx.indianoil.in, appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\0047HE744\Desktop\..., autoGrantPermissions: true, automationName: UIAutomator2, deviceName: emulatortest2, platformName: ANDROID}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 14, appium:statBarHeight: 98, appium:takesScreenshot: true, appium:viewportRect: {height: 2858, left: 0, top: 98, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 740be5c3-4691-4aa8-9b4b-cfe8c165392b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at appium.MobileTesting.MobileActions.getWhenVisible(MobileActions.java:29)
+	at appium.MobileTesting.MobileUI.btn_locateus(MobileUI.java:56)
+	at appium.MobileTesting.MobileActions.login(MobileActions.java:110)
+	at appium.MobileTesting.Logintest.testAppium1(Logintest.java:26)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -176,7 +152,7 @@ Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:autoGrantPermis
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>184</td>
+<td>149</td>
 <td>appium.MobileTesting.Logintest@70f02c32</td></tr>
 </table><p>
 </body>

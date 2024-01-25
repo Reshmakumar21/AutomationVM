@@ -113,7 +113,7 @@ public class AppiumSetup {
   	  //options.setCapability("locationCoordinate", "28.47, 77.05");
   	  //options.setCapability("locationCoordinate", "28.47, 77.05");
   	  //options.setApp("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//consumer-app.apk");
-  	  options.setApp(System.getProperty("user.dir") + "/consumer-app.ipa");
+  	  options.setApp(System.getProperty("user.dir") + "/consumer-app.apk");
 
   	  AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
 

@@ -9,34 +9,22 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">184,561</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">149,583</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">appium.MobileTesting.Logintest</td><td><a href="#m0">testAppium1</a></td><td rowspan="1">1704984210273</td><td rowspan="1">184537</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">appium.MobileTesting.Logintest</td><td><a href="#m0">testAppium1</a></td><td rowspan="1">1706170388234</td><td rowspan="1">149560</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">appium.MobileTesting.Logintest#testAppium1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: The application at &apos;C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting/consumer-app.apk&apos; does not exist or is not accessible 
-Host info: host: &apos;IBM-965GDN3&apos;, ip: &apos;192.168.0.190&apos;
+<h2>Default test</h2><h3 id="m0">appium.MobileTesting.Logintest#testAppium1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.LinearLayout[@resource-id=&apos;cx.indianoil.in:id/locateus_layout&apos;]/android.widget.ImageView (tried for 120 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[{appium:autoGrantPermissions=true, appium:deviceName=emulatortest2, platformName=ANDROID, appium:automationName=UIAutomator2, appium:app=C:\Users\0047HE744\Desktop\Personal\MyLearning\AppiumTesting\MobileTesting/consumer-app.apk}], desiredCapabilities=Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:deviceName: emulatortest2, platformName: ANDROID}}]
-Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:deviceName: emulatortest2, platformName: ANDROID}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:177)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:238)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:164)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
-	at appium.MobileTesting.AppiumSetup.initiateDriver(AppiumSetup.java:118)
-	at appium.MobileTesting.Logintest.testAppium1(Logintest.java:22)
+Capabilities {appium:app: C:\Users\0047HE744\Desktop\..., appium:appPackage: cx.indianoil.in, appium:autoGrantPermissions: true, appium:automationName: UIAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\0047HE744\Desktop\..., autoGrantPermissions: true, automationName: UIAutomator2, deviceName: emulatortest2, platformName: ANDROID}, appium:deviceApiLevel: 34, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 14, appium:statBarHeight: 98, appium:takesScreenshot: true, appium:viewportRect: {height: 2858, left: 0, top: 98, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 740be5c3-4691-4aa8-9b4b-cfe8c165392b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
+	at appium.MobileTesting.MobileActions.getWhenVisible(MobileActions.java:29)
+	at appium.MobileTesting.MobileUI.btn_locateus(MobileUI.java:56)
+	at appium.MobileTesting.MobileActions.login(MobileActions.java:110)
+	at appium.MobileTesting.Logintest.testAppium1(Logintest.java:26)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

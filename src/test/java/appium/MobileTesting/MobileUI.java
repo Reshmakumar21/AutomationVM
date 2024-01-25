@@ -6,6 +6,11 @@ import org.openqa.selenium.WebElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class MobileUI {
+	
+	public static WebElement btn_popupclose(AndroidDriver driver) {
+
+		return MobileActions.getWhenVisible(By.id("cx.indianoil.in:id/button_close"), driver);
+	}
 
 	public static WebElement btn_newcon(AndroidDriver driver) {
 

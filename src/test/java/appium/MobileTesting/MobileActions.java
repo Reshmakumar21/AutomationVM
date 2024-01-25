@@ -94,6 +94,7 @@ public class MobileActions {
 		String path = createScreenshotsFolder(System.getProperty("user.dir") + "/Results");
 		//MobileUI.btn_newcon(driver).isDisplayed();
 		//takeScreenshot(driver,path);
+		MobileUI.btn_popupclose(driver).click();
 		MobileUI.btn_menu(driver).click();
 		testResult(driver);
 		//takeScreenshot(driver,path);
