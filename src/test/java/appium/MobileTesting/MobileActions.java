@@ -100,7 +100,7 @@ public class MobileActions {
 		//takeScreenshot(driver,path);
 		MobileUI.btn_login(driver).click();
 		takeScreenshot(driver,path);		
-
+		Thread.sleep(4000);
 		MobileUI.btn_username(driver).sendKeys("9445332945");
 		MobileUI.btn_password(driver).sendKeys("Venki00*");
 		takeScreenshot(driver,path);
