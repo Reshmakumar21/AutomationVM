@@ -22,14 +22,13 @@ public class MobileUI {
 	public static WebElement btn_menu(AndroidDriver driver) {
 
 		System.out.println("Clicking on menu");
-		return MobileActions.getWhenVisible(By.xpath("//android.widget.ImageButton"),driver);
+		return MobileActions.getWhenVisible(By.id("cx.indianoil.in:id/text_card_cylinder"),driver);
 	}
 	
 	public static WebElement btn_login(AndroidDriver driver) {
 
 		System.out.println("Clicking on sign in");
-		return MobileActions.getWhenVisible(By.xpath("//android.widget.LinearLayout"
-				+ "[@resource-id='cx.indianoil.in:id/new_card_user']/android.widget.LinearLayout/android.widget.ImageView"),driver);
+		return MobileActions.getWhenVisible(By.id("cx.indianoil.in:id/tv_bottom_dialog_login"),driver);
 	}
 
 	public static WebElement btn_username(AndroidDriver driver) {
