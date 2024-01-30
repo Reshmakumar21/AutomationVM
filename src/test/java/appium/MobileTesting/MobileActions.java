@@ -107,7 +107,7 @@ public class MobileActions {
 		MobileUI.btn_submit(driver).click();
 		
 		takeScreenshot(driver,path);
-		MobileUI.btn_locateus(driver).click();
+		//MobileUI.btn_locateus(driver).click();
 		takeScreenshot(driver,path);
 		System.out.println("test completed");
 		try {
