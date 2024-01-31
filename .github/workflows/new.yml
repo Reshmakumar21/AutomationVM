@@ -49,6 +49,6 @@ jobs:
        - name: Download artifacts
          uses: actions/download-artifact@v2
          with:
-          name: test-result.png
+          name: test-results
           path: Results
 
