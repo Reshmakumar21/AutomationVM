@@ -89,14 +89,13 @@ public class MobileActions {
 
 	}
 	public static void login(AndroidDriver driver) throws IOException, InterruptedException {
-		try {
-		startScreenRecording();
 
 		//String path = createScreenshotsFolder("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//Results");
 		String path = createScreenshotsFolder(System.getProperty("user.dir") + "/Results");
 		//MobileUI.btn_newcon(driver).isDisplayed();
 		//takeScreenshot(driver,path);
 		MobileUI.btn_popupclose(driver).click();
+		MobileUI.btn_newcon(driver).isDisplayed();
 		MobileUI.btn_newconnection(driver).click();
 		testResult(driver);
 		//takeScreenshot(driver,path);
@@ -109,6 +108,12 @@ public class MobileActions {
 		MobileUI.btn_submit(driver).click();
 		
 		takeScreenshot(driver,path);
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		MobileUI.btn_locateus(driver).click();
 		takeScreenshot(driver,path);
 		System.out.println("test completed");
@@ -120,37 +125,7 @@ public class MobileActions {
 		}
 		testResult(driver);
 		//WhatsAppWeb.whatsappAutomation();
-		} catch (Exception e) {
-	        // Handle exceptions that occur during the test
-	        e.printStackTrace();
-	    } finally {
-	        // Ensure that the screen recording is stopped, even if an exception occurs
-	        stopScreenRecording();
-	    }
-	}
-	
-	
-	private static void startScreenRecording() throws IOException {
-	    try {
-	        // Start screen recording using ADB
-	        Process process = Runtime.getRuntime().exec("adb shell screenrecord /sdcard/test-recording.mp4");
-	    } catch (IOException e) {
-	        // Handle exceptions related to starting screen recording
-	        e.printStackTrace();
-	    }
-	}
+		
 
-	private static void stopScreenRecording() throws IOException, InterruptedException {
-	    try {
-	        // Wait for a while to capture screen recording
-	        Thread.sleep(5000);
-
-	        // Stop screen recording using ADB
-	        Process process = Runtime.getRuntime().exec("adb pull /sdcard/test-recording.mp4 " + System.getProperty("user.dir") + "/test-result-video.mp4");
-	        process.waitFor();
-	    } catch (IOException | InterruptedException e) {
-	        // Handle exceptions related to stopping screen recording
-	        e.printStackTrace();
-	    }
-	}
+}
 }

@@ -8,7 +8,8 @@ import io.appium.java_client.android.AndroidDriver;
 public class MobileUI {
 	
 	public static WebElement btn_popupclose(AndroidDriver driver) {
-
+		
+		System.out.println("About to click on close");
 		return MobileActions.getWhenVisible(By.id("cx.indianoil.in:id/button_close"), driver);
 	}
 
