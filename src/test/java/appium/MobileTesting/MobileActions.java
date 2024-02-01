@@ -109,6 +109,7 @@ public class MobileActions {
 		MobileUI.btn_password(driver).sendKeys("Venki00*");
 		takeScreenshot(driver,path);
 		MobileUI.btn_submit(driver).click();
+		testResult(driver);
 		try {
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
@@ -116,7 +117,6 @@ public class MobileActions {
 			e.printStackTrace();
 		}
 		//takeScreenshot(driver,path);
-		testResult(driver);
 		MobileUI.btn_locateus(driver).click();
 		//takeScreenshot(driver,path);
 		System.out.println("test completed");
