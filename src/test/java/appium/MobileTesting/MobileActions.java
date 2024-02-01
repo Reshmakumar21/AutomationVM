@@ -88,6 +88,7 @@ public class MobileActions {
         }
 
 	}
+	
 	public static void login(AndroidDriver driver) throws IOException, InterruptedException {
 
 		//String path = createScreenshotsFolder("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//Results");
@@ -95,7 +96,9 @@ public class MobileActions {
 		//MobileUI.btn_newcon(driver).isDisplayed();
 		//takeScreenshot(driver,path);
 		MobileUI.btn_popupclose(driver).click();
+
 		MobileUI.btn_newcon(driver).isDisplayed();
+
 		MobileUI.btn_newconnection(driver).click();
 		testResult(driver);
 		//takeScreenshot(driver,path);
@@ -106,7 +109,12 @@ public class MobileActions {
 		MobileUI.btn_password(driver).sendKeys("Venki00*");
 		takeScreenshot(driver,path);
 		MobileUI.btn_submit(driver).click();
-		
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		takeScreenshot(driver,path);
 		try {
 			Thread.sleep(10000);
@@ -125,7 +133,8 @@ public class MobileActions {
 		}
 		testResult(driver);
 		//WhatsAppWeb.whatsappAutomation();
-		
 
-}
+	}
+	
+
 }
