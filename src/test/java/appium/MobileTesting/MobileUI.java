@@ -19,21 +19,21 @@ public class MobileUI {
 	}
 	
 	
-	public static WebElement btn_menu(AndroidDriver driver) {
+	public static WebElement btn_newconnection(AndroidDriver driver) {
 
-		System.out.println("Clicking on menu");
+		System.out.println("Clicking on Order Cylinder");
 		return MobileActions.getWhenVisible(By.id("cx.indianoil.in:id/text_card_cylinder"),driver);
 	}
 	
 	public static WebElement btn_login(AndroidDriver driver) {
 
-		System.out.println("Clicking on sign in");
+		System.out.println("Clicking on login button");
 		return MobileActions.getWhenVisible(By.id("cx.indianoil.in:id/tv_bottom_dialog_login"),driver);
 	}
 
 	public static WebElement btn_username(AndroidDriver driver) {
 
-		System.out.println("entering user name");
+		System.out.println("Entering user name");
 		return MobileActions.getWhenVisible(By.xpath("//android.widget.EditText[@resource-id='cx.indianoil.in:id/email']"),driver);
 	}
 
