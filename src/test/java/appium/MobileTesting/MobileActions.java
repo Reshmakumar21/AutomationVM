@@ -110,13 +110,13 @@ public class MobileActions {
 		takeScreenshot(driver,path);
 		MobileUI.btn_submit(driver).click();
 		MobileUI.btn_submit(driver).click();
-		testResult(driver);
 		try {
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		testResult(driver);
 		//takeScreenshot(driver,path);
 		MobileUI.btn_locateus(driver).click();
 		//takeScreenshot(driver,path);
