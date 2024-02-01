@@ -100,7 +100,7 @@ public class MobileActions {
 		MobileUI.btn_newcon(driver).isDisplayed();
 
 		MobileUI.btn_newconnection(driver).click();
-		testResult(driver);
+		//testResult(driver);
 		//takeScreenshot(driver,path);
 		MobileUI.btn_login(driver).click();
 		takeScreenshot(driver,path);		
@@ -115,15 +115,10 @@ public class MobileActions {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		takeScreenshot(driver,path);
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		//takeScreenshot(driver,path);
+		testResult(driver);
 		MobileUI.btn_locateus(driver).click();
-		takeScreenshot(driver,path);
+		//takeScreenshot(driver,path);
 		System.out.println("test completed");
 		try {
 			Thread.sleep(10000);
@@ -131,7 +126,7 @@ public class MobileActions {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		testResult(driver);
+		//testResult(driver);
 		//WhatsAppWeb.whatsappAutomation();
 
 	}
