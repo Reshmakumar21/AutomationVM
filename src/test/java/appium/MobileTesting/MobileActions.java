@@ -103,6 +103,7 @@ public class MobileActions {
 		//testResult(driver);
 		//takeScreenshot(driver,path);
 		MobileUI.btn_login(driver).click();
+		MobileUI.btn_login(driver).click();
 		takeScreenshot(driver,path);		
 		Thread.sleep(4000);
 		MobileUI.btn_username(driver).sendKeys("9445332945");
