@@ -106,7 +106,12 @@ public class MobileActions {
 		MobileUI.btn_password(driver).sendKeys("Venki00*");
 		takeScreenshot(driver,path);
 		MobileUI.btn_submit(driver).click();
-		
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		takeScreenshot(driver,path);
 		MobileUI.btn_locateus(driver).click();
 		takeScreenshot(driver,path);
