@@ -95,7 +95,9 @@ public class MobileActions {
 	
 	public static void login(AndroidDriver driver) throws IOException, InterruptedException {
 		try {
-		//startRecording(driver);
+
+		startRecording(driver);
+
 		//String path = createScreenshotsFolder("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//Results");
 		String path = createScreenshotsFolder(System.getProperty("user.dir") + "/Results");
 		//MobileUI.btn_newcon(driver).isDisplayed();
@@ -142,7 +144,7 @@ public class MobileActions {
 		}catch (Exception e) {
 		    e.printStackTrace();
 		} finally {
-		    //stopRecording(driver);
+		    stopRecording(driver);
 		}
 	}
 
