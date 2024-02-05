@@ -1,6 +1,7 @@
 package appium.MobileTesting;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
@@ -18,6 +19,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+
+import io.appium.java_client.screenrecording.CanRecordScreen;
+import org.apache.commons.codec.binary.Base64;
 
 
 public class MobileActions {
@@ -90,7 +94,8 @@ public class MobileActions {
 	}
 	
 	public static void login(AndroidDriver driver) throws IOException, InterruptedException {
-
+		try {
+		startRecording(driver);
 		//String path = createScreenshotsFolder("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//Results");
 		String path = createScreenshotsFolder(System.getProperty("user.dir") + "/Results");
 		//MobileUI.btn_newcon(driver).isDisplayed();
@@ -109,17 +114,22 @@ public class MobileActions {
 		MobileUI.btn_password(driver).sendKeys("Venki00*");
 		takeScreenshot(driver,path);
 		MobileUI.btn_submit(driver).click();
-		MobileUI.btn_submit(driver).click();
 		try {
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		testResult(driver);
-		//takeScreenshot(driver,path);
+		takeScreenshot(driver,path);
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		MobileUI.btn_locateus(driver).click();
-		//takeScreenshot(driver,path);
+
+		takeScreenshot(driver,path);
 		System.out.println("test completed");
 		try {
 			Thread.sleep(10000);
@@ -127,10 +137,28 @@ public class MobileActions {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//testResult(driver);
+		testResult(driver);
 		//WhatsAppWeb.whatsappAutomation();
-
+		}catch (Exception e) {
+		    e.printStackTrace();
+		} finally {
+		    stopRecording(driver);
+		}
 	}
-	
+
+    public static void startRecording(AndroidDriver driver) {
+        ((CanRecordScreen) driver).startRecordingScreen();
+    }
+
+    public static void stopRecording(AndroidDriver driver) throws IOException {
+        String media = ((CanRecordScreen) driver).stopRecordingScreen();
+        String filePath = System.getProperty("user.dir") + File.separator + "test-results-recording.mp4";
+
+        try (FileOutputStream stream = new FileOutputStream(filePath)) {
+            stream.write(Base64.decodeBase64(media));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 }
