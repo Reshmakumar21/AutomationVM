@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Calendar;
 import java.util.Date;
 
 import javax.imageio.ImageIO;
@@ -96,7 +95,7 @@ public class MobileActions {
 	
 	public static void login(AndroidDriver driver) throws IOException, InterruptedException {
 		try {
-		startRecording(driver);
+		//startRecording(driver);
 		//String path = createScreenshotsFolder("C://Users//0047HE744//Desktop//Personal//MyLearning//AppiumTesting//MobileTesting//Results");
 		String path = createScreenshotsFolder(System.getProperty("user.dir") + "/Results");
 		//MobileUI.btn_newcon(driver).isDisplayed();
@@ -129,7 +128,6 @@ public class MobileActions {
 			e.printStackTrace();
 		}
 		MobileUI.btn_locateus(driver).click();
-		MobileUI.btn_locateus(driver).click();
 
 		takeScreenshot(driver,path);
 		System.out.println("test completed");
@@ -144,7 +142,7 @@ public class MobileActions {
 		}catch (Exception e) {
 		    e.printStackTrace();
 		} finally {
-		    stopRecording(driver);
+		    //stopRecording(driver);
 		}
 	}
 
