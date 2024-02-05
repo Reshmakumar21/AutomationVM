@@ -39,18 +39,32 @@ jobs:
           api-level: 29
           script: |
                   mvn clean test
-       - name: Upload Test Artifacts
+                  
+       - name: Upload Test Screenshot
          if: always() 
          uses: actions/upload-artifact@v2
          with:
-           name: test-results
-           path: /Users/runner/work/Automation/Automation/test-result.png
+          name: test-screenshot
+          path: /Users/runner/work/Automation/Automation/test-result.png
 
-
+       - name: Upload Test Recording
+         if: always() 
+         uses: actions/upload-artifact@v2
+         with:
+          name: test-recording
+          path: /Users/runner/work/Automation/Automation/test-results-recording.mp4
+       
        - name: Download artifacts
          if: always() 
          uses: actions/download-artifact@v2
          with:
-          name: test-results
-          path: Results
+          name: test-screenshot
+          path: Results/screenshot
+
+       - name: Download recording
+         if: always() 
+         uses: actions/download-artifact@v2
+         with:
+          name: test-recording
+          path: Results/recording
 
