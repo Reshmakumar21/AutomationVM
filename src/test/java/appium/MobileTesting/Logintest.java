@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 import io.appium.java_client.android.AndroidDriver;
 
 public class Logintest{
-    
+	    
   @Test
-  public static void testAppium1() throws IOException, InterruptedException {
+  public static void testAppium1() throws IOException, InterruptedException{
 	  
 	  //launching emulator and waiting for boot completion
 	  AppiumSetup.launchEmulator();
